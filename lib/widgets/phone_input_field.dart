@@ -11,7 +11,7 @@ class PhoneInputField extends StatefulWidget {
 }
 
 class _PhoneInputFieldState extends State<PhoneInputField> {
-  String countryCode = "+964";
+  String countryCode = "964+";
   String countryFlag = "🇮🇶";
 
   void _selectCountry() {
