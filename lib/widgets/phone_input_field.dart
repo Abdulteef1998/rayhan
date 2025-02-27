@@ -10,8 +10,8 @@ class PhoneInputField extends StatefulWidget {
 }
 
 class _PhoneInputFieldState extends State<PhoneInputField> {
-  String countryCode = "+964"; // كود الدولة الافتراضي (العراق)
-  String countryFlag = "🇮🇶"; // العلم الافتراضي (العراق)
+  String countryCode = "+964";
+  String countryFlag = "🇮🇶";
 
   void _selectCountry() {
     showCountryPicker(
@@ -31,9 +31,9 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
     return Container(
       height: 55,
       decoration: BoxDecoration(
-        color: Colors.grey.shade100, // لون الخلفية
-        borderRadius: BorderRadius.circular(10), // حواف دائرية
-        border: Border.all(color: Colors.grey.shade300), // حدود خفيفة
+        color: Colors.grey.shade100,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.grey.shade300),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
@@ -42,10 +42,7 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
             onTap: _selectCountry,
             child: Row(
               children: [
-                Text(
-                  countryFlag,
-                  style: const TextStyle(fontSize: 22), // حجم العلم
-                ),
+                Text(countryFlag, style: const TextStyle(fontSize: 22)),
                 const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
               ],
             ),
@@ -64,7 +61,12 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
                 letterSpacing: 2,
               ),
               decoration: const InputDecoration(
-                hintText: " اكتب رقمك هنا",
+                hintText: "اكتب رقمك هنا",
+                hintStyle: TextStyle(
+                  color: Colors.black26,
+
+                  fontWeight: FontWeight.w400,
+                ),
                 border: InputBorder.none,
               ),
             ),

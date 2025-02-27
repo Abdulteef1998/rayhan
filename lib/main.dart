@@ -22,7 +22,7 @@ class RayhanApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        supportedLocales: const [Locale("ar")], // دعم اللغة العربية فقط
+        supportedLocales: const [Locale("ar")],
         locale: const Locale("ar"),
         home: const SignupScreen(),
       ),
