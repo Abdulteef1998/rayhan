@@ -60,7 +60,7 @@ class _ResendCodeTimerState extends State<ResendCodeTimer> {
                 ? "يمكنك إعادة إرسال الكود"
                 : "يمكنك إعادة إرسال الكود خلال $secondsRemaining ثانية",
             style: TextStyle(
-              color: enableResend ? Colors.black : Colors.grey,
+              color: enableResend ? AppColors.black : AppColors.grey,
               fontSize: 16,
               fontWeight: FontWeight.w400,
             ),

@@ -1,5 +1,6 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:rayhan/utils/app_colors.dart';
 
 class PhoneInputField extends StatefulWidget {
   final TextEditingController controller;
@@ -43,7 +44,7 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
             child: Row(
               children: [
                 Text(countryFlag, style: const TextStyle(fontSize: 22)),
-                const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
+                const Icon(Icons.keyboard_arrow_down, color: AppColors.grey),
               ],
             ),
           ),
@@ -79,7 +80,7 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.grey,
+              color: AppColors.grey,
             ),
           ),
           Spacer(),

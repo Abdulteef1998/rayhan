@@ -20,7 +20,7 @@ class TermsAndConditions extends StatelessWidget {
           value: isChecked,
           onChanged: (value) => onChanged(value ?? false),
           activeColor: AppColors.primary,
-          checkColor: Colors.white,
+          checkColor: AppColors.white,
         ),
         const Expanded(
           child: Text.rich(

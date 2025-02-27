@@ -20,10 +20,10 @@ class OTPInputField extends StatelessWidget {
       textStyle: const TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.bold,
-        color: Colors.black,
+        color: AppColors.black,
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.white,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Colors.grey.shade400, width: 1.5),
       ),

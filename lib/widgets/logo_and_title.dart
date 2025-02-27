@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rayhan/utils/app_colors.dart';
 
 class LogoAndTitle extends StatelessWidget {
   const LogoAndTitle({super.key});
@@ -13,11 +14,11 @@ class LogoAndTitle extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 5),
-        const Text(
+        Text(
           "العديد من الخدمات والمنتجات بخصومات كبيرة في انتظارك.",
           style: TextStyle(
             fontSize: 18,
-            color: Colors.black,
+            color: AppColors.black,
             fontWeight: FontWeight.w400,
           ),
           textAlign: TextAlign.center,
