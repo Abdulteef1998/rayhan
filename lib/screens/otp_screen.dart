@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:rayhan/utils/app_colors.dart';
 
 import '../widgets/confirm_button.dart';
 import '../widgets/otp_input_field.dart';
@@ -32,8 +34,12 @@ class _OTPScreenState extends State<OTPScreen> {
             ),
             content: Column(
               mainAxisSize: MainAxisSize.min,
-              children: const [
-                Icon(Icons.check_circle, color: Color(0xFF1B7754), size: 50),
+              children: [
+                Icon(
+                  FontAwesomeIcons.circleNotch,
+                  color: AppColors.primary,
+                  size: 50,
+                ),
                 SizedBox(height: 10),
                 Text(
                   "تم التحقق بنجاح!",

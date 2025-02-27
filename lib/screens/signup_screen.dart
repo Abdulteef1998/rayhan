@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rayhan/screens/otp_screen.dart';
 import 'package:rayhan/widgets/confirm_button.dart';
 import 'package:rayhan/widgets/logo_and_title.dart';
@@ -17,7 +18,7 @@ class _SignupScreenState extends State<SignupScreen> {
   bool isChecked = false;
   String? errorMessage;
 
-  void _onConfirmPressed() {
+  void _onConfirmPressed() async {
     String phoneNumber = phoneController.text.trim();
 
     if (phoneNumber.isEmpty) {
@@ -30,12 +31,50 @@ class _SignupScreenState extends State<SignupScreen> {
       });
 
       if (isChecked) {
-        Navigator.push(
+        _showSuccessDialog(context);
+        await Future.delayed(const Duration(seconds: 2));
+        if (mounted) Navigator.pop(context);
+        await Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const OTPScreen()),
         );
+        phoneController.clear();
       }
     }
+  }
+
+  void _showSuccessDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder:
+          (context) => AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(
+                  FontAwesomeIcons.circleNotch,
+                  color: Colors.green,
+                  size: 50,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  "تسجيل الدخول",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+    );
+  }
+
+  @override
+  void dispose() {
+    phoneController.dispose();
+    super.dispose();
   }
 
   @override

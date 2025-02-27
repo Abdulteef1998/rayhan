@@ -20,7 +20,7 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
       showPhoneCode: true,
       onSelect: (Country country) {
         setState(() {
-          countryCode = "${country.phoneCode}";
+          countryCode = "${country.phoneCode}+";
           countryFlag = country.flagEmoji;
         });
       },
@@ -73,14 +73,14 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
             ),
           ),
 
-          const SizedBox(width: 10),
+          const SizedBox(width: 20),
           Text(
             countryCode,
             textAlign: TextAlign.start,
             style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: AppColors.grey,
+              fontSize: 18,
+              fontWeight: FontWeight.w400,
+              color: AppColors.black,
             ),
           ),
           Spacer(),
